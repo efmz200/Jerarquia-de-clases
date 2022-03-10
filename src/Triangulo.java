@@ -23,14 +23,21 @@ public class Triangulo extends Figura implements Comparable<Triangulo> {
         int ladosPorComparar = trianPorComparar.cantLados();
         int misLados = cantLados();
 
+        //el area es igual a la que se comprara y tiene los mismos lados
         if((miArea==areaPorComparar)&&(ladosPorComparar==misLados)){
-            return 0;
+           return 0;
         }
+        //mi area es mayor que la que se compara y tiene los mismos lados
         else if((miArea > areaPorComparar)&&(ladosPorComparar==misLados)){
             return 1;
         }
-        else{
+        //mi area es menor que la que compara y tiene los mismos lados
+        else if((miArea < areaPorComparar)&&(ladosPorComparar==misLados)){
             return -1;
+        }
+        // la cantidad de lados es diferente 
+        else{
+            return -2;
         } 
     }
 
