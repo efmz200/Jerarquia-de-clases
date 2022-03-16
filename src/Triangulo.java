@@ -1,4 +1,4 @@
-public class Triangulo extends Figura implements Comparable<Triangulo> {
+public class Triangulo extends Figura implements Comparable<Figura> {
 
     private double base;
     private double altura;
@@ -17,7 +17,7 @@ public class Triangulo extends Figura implements Comparable<Triangulo> {
         return 3;
     }
     @Override
-    public int compareTo(Triangulo trianPorComparar) {
+    public int compareTo(Figura trianPorComparar) {
         double areaPorComparar = trianPorComparar.calcularArea();
         double miArea = this.calcularArea();
         int ladosPorComparar = trianPorComparar.cantLados();
